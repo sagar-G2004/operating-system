@@ -24,16 +24,13 @@ int main()
 	}
 	printf("enter the array of available resources\n");
 	for(i=0;i<m;i++)
-		scanf("%d",&avail[i]);
-	int f[n],ans[n],ind=0;
-	for(i=0;i<n;i++)
+	scanf("%d",&avail[i]);
+	int f[n],ans[n],ind=0;for(i=0;i<n;i++)
 	{
 		ans[i]=0;
 	}
 	for(k=0;k<n;k++)
-	{
-		f[k]=0;
-	}
+	f[k]=0;
 	int need[n][m];
 	for(i=0;i<n;i++)
 	{
@@ -51,7 +48,7 @@ int main()
 		}
 		printf("\n");
 	}
-	//int y=0;
+	int y=0;
 	for(k=0;k<5;k++)
 	{
 		for(i=0;i<n;i++)
@@ -70,10 +67,8 @@ int main()
 				if(flag==0)
 				{
 					ans[ind++]=i;
-					for(j=0;j<m;j++)
-					{
-						avail[j]+=alloc[i][j];
-					}
+					for(y=0;y<m;y++)
+						avail[y]+=alloc[i][j];
 					f[i]=1;
 				}
 			}
